@@ -23,22 +23,23 @@ struct _DatePicker: View {
     
     var body: some View {
         VStack {
-        HStack {
-            Text("\(name)")
-            Spacer()
-            Button(action: {
-                self.isSelecting.toggle()
-            }) {
-                Text("\(date, formatter: dateFormatter)")
+            HStack {
+                Text("\(name)")
+                Spacer()
+                Button(action: {
+                    self.isSelecting.toggle()
+                }) {
+                    Text("\(date, formatter: dateFormatter)")
+                }
+            }.frame(width: 300)
+                
+            if self.isSelecting {
+                
+                DatePicker(
+                    self.$date,
+                    displayedComponents: .date
+                )
             }
-        }.frame(width: 300)
-            
-        if self.isSelecting {
-            DatePicker(
-                self.$date,
-                displayedComponents: .date
-            )
-        }
         }
     }
 }

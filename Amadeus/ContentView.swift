@@ -28,9 +28,10 @@ struct ContentView : View {
             
             _DatePicker(name: "FROM:", date: self.$startDate)
             _DatePicker(name: "TO:", date: self.$endDate)
-
-            Text("Start: \(startDate, formatter: dateFormatter)")
-            Text("End: \(endDate, formatter: dateFormatter)")
+            
+            
+            // Text("Start: \(startDate, formatter: dateFormatter)")
+            // Text("End: \(endDate, formatter: dateFormatter)")
                 
         }
             .navigationBarTitle(Text("Navigation Title"))
