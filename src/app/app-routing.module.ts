@@ -9,20 +9,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'account',
-    loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
-  },
-  {
-    path: 'support',
-    loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule)
-  },
-  {
     path: 'app',
     loadChildren: () => import('./pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
   },
   {
-    path: 'tutorial',
-    loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
+    path: 'preferences',
+    loadChildren: () => import('./pages/preferences/preferences-routing.module').then(m => m.PreferencesPageRoutingModule),
     canLoad: [CheckTutorial]
   }
 ];
