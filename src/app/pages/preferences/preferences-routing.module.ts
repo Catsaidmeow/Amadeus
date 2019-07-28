@@ -10,18 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: 'main',
-        children: [
-          {
-            path: '',
-            component: ViewComponent,
-          }
-        ]
+        component: ViewComponent,
       },
-      {
-        path: '',
-        redirectTo: '/app/preferences',
-        pathMatch: 'full'
-      }
     ]
   }
 ];
